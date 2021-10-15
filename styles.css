@@ -114,14 +114,14 @@ body {
   background-color: white;
 }
 
-.winning-message {
+.endGame {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
+  background-color: rgba(202, 80, 80, 0.9);
   justify-content: center;
   align-items: center;
   color: white;
@@ -129,7 +129,7 @@ body {
   flex-direction: column;
 }
 
-.winning-message button {
+.endGame button {
   font-size: 3rem;
   background-color: white;
   border: 1px solid black;
@@ -137,12 +137,12 @@ body {
   cursor: pointer;
 }
 
-.winning-message button:hover {
+.endGame button:hover {
   background-color: black;
   color: white;
   border-color: white;
 }
 
-.winning-message.show {
+.endGame.show {
   display: flex;
 }

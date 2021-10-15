@@ -14,10 +14,9 @@ const WINNING_COMBOS = [
 
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
-
+const winningMessageElement = document.getElementById('winningMessage');
 const restartButton = document.getElementById('restartButton');
 
-const winningMessageElement = document.getElementById('winningMessage');
 const winningMessageTextElement = document.querySelector(
   '[data-winning-message-text]'
 );
@@ -34,7 +33,7 @@ function startGame() {
     cell.classList.remove(X_CLASS);
     cell.classList.remove(CIRCLE_CLASS);
     cell.removeEventListener('click', handleClick);
-    cell.addEventListener('click', handelClick, { once: true });
+    cell.addEventListener('click', handleClick, { once: true });
   });
   setBoardHoverClass();
   winningMessageElement.classList.remove('show');
@@ -53,9 +52,6 @@ function handleClick(e) {
     swapTurns();
     setBoardHoverClass();
   }
-
-  swapTurns();
-  setBoardHoverClass();
 }
 
 function endGame(draw) {
