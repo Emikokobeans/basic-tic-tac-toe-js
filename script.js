@@ -96,3 +96,6 @@ function checkWin(currentClass) {
     });
   });
 }
+
+//add dark and light mode?
+//make prettier~
